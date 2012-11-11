@@ -11,4 +11,5 @@ template "/etc/hosts" do
   owner "root"
   group "root"
   mode 0644
+  not_if { node[:hosts].empty }
 end
